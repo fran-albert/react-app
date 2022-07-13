@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import NavBar from './components/NavBar';
+import React from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <NavBar/>
+      <header>
+        <NavBar></NavBar>
+        <ItemListContainer greeting="El stock es de 6 productos. Gracias"></ItemListContainer>
+
+      </header>      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
