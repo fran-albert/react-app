@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../App.css";
+import { Button } from "@mui/material";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -10,19 +10,24 @@ const ItemCount = ({ initial, stock, onAdd }) => {
   const aumentar = () => {
     setCount(count + 1);
   };
-  
 
   return (
     <div className="counter">
-      <button disabled={count <= 1} onClick={disminuir}>
+      <Button variant="outlined" disabled={count <= 1} onClick={disminuir}>
         -
-      </button>
+      </Button>
       <span>{count}</span>
-      <button disabled={count > stock} onClick={aumentar}>
+      <Button variant="outlined" disabled={count > stock} onClick={aumentar}>
         +
-      </button>
+      </Button>
       <div>
-        <button disabled={stock <= 0} onClick={()=> onAdd(count)}>Agregar al carrito</button>
+        <Button
+          variant="contained"
+          disabled={stock <= 0}
+          onClick={() => onAdd(count)}
+        >
+          Agregar al Carrito
+        </Button>
       </div>
     </div>
   );

@@ -5,12 +5,13 @@ import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <header>
-        <NavBar></NavBar>
+      <NavBar></NavBar>
+      </header>
+      <div className="">
         <ItemListContainer greeting="El stock es de 6 productos. Gracias"></ItemListContainer>
-
-      </header>      
+      </div>
     </div>
   );
 }
