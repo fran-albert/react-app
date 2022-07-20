@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
+import { ItemDetailContainer } from "./components/ItemDetailContainer";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
       <NavBar></NavBar>
       </header>
       <div className="">
-        <ItemListContainer greeting="El stock es de 6 productos. Gracias"></ItemListContainer>
+        {/* <ItemListContainer greeting="El stock es de 6 productos. Gracias"></ItemListContainer> */}
+        <ItemDetailContainer />
       </div>
     </div>
   );

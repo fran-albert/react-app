@@ -1,18 +1,10 @@
-import "../App.css";
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Container } from "@mui/system";
+import React from 'react'
 
-export const Item = ({ info }) => {
+export const ItemDetail = ({data}) => {
   return (
     <Container maxWidth="xs">
       <Card sx={{ maxWidth: 340 }}>
-        <CardMedia component="img" height="150" image={info.image} alt="" />
+        <CardMedia component="img" height="150" image={data.image} alt="" />
         <CardContent style={{ backgroundColor: "#eeeeee" }}>
           <Typography
             style={{ backgroundColor: "#eeeeee" }}
@@ -20,7 +12,7 @@ export const Item = ({ info }) => {
             variant="h5"
             component="div"
           >
-            {info.title}
+            {data.title}
           </Typography>
         </CardContent>
         <CardActions style={{ backgroundColor: "#eeeeee" }}>
@@ -28,7 +20,7 @@ export const Item = ({ info }) => {
             size="small"
             variant="contained"
             color="info"
-            onClick={()=>detalles()}
+            onClick={()=>alert("asd")}
             style={{ backgroundColor: "#d07019" }}
           >
             Ver Detalle
@@ -37,7 +29,7 @@ export const Item = ({ info }) => {
         </CardActions>
       </Card>
     </Container>
-  );
-};
+  )
+}
 
-export default Item;
+export default ItemDetail;

@@ -2,10 +2,13 @@ import React from 'react'
 import '../App'
 import Item from './Item'
 
-export const ItemList = ({data = []}) => {
+const ItemList = ({data = []}) => {
   return (
-    data.map(producto => <Item key={producto.id} info={producto} />)
+    <div className='productosPrueba'>
+    {data.map(producto => <Item key={producto.id} info={producto} />)}
+    </div>
   )
+  
 }
 
 export default ItemList;

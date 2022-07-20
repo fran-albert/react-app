@@ -41,3 +41,10 @@
 span {
   font-size: 20px;
 }
+.productosPrueba {
+  padding: 1rem 8rem 2rem 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
