@@ -7,19 +7,20 @@ import {
   Typography,
 } from "@mui/material";
 import CartWidget from "./CartWidget";
+import  {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div className="navegador">
       <div className="">
-        <Button href="#">Logo</Button>
+        <NavLink to="/"><img src="https://img.icons8.com/clouds/30/000000/this-pc.png"/></NavLink>
       </div>
       <div className="">
-        <nav className="">
-          <Button href="#">Inicio</Button>
-          <Button href="#">Productos</Button>
-          <Button href="#">Nosotros</Button>
-          <Button href="#">Contacto</Button>
+        <nav className="navLinks">
+          <NavLink to="/">Inicio</NavLink>
+          <NavLink to="/productos/">Productos</NavLink>
+          <NavLink to="/nosotros">Nosotros</NavLink>
+          <NavLink to="/contacto">Contacto</NavLink>
         </nav>
       </div>
       <div className="">
