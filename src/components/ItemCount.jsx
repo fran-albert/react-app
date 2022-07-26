@@ -13,8 +13,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
   return (
     <div className="counter">
-      <h2>Best Buy</h2>
-      {/* <Button variant="outlined" disabled={count <= 1} onClick={disminuir}>
+      <Button variant="outlined" disabled={count <= 1} onClick={disminuir}>
         -
       </Button>
       <span>{count}</span>
@@ -29,7 +28,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         >
           Agregar al Carrito
         </Button>
-      </div> */}
+      </div>
     </div>
   );
 };

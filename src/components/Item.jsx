@@ -7,7 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/system";
-import { detallesProductos } from "../utils/detallesProductos";
+import { NavLink } from "react-router-dom";
 
 export const Item = ({ info }) => {
 
@@ -26,16 +26,7 @@ export const Item = ({ info }) => {
           </Typography>
         </CardContent>
         <CardActions style={{ backgroundColor: "#eeeeee" }}>
-          <Button
-            size="small"
-            variant="contained"
-            color="info"
-            onClick={()=>detallesProductos()}
-            style={{ backgroundColor: "#d07019" }}
-          >
-            Ver Detalle
-          </Button>
-          
+          <NavLink to={`/detalles/${info.id}`}>Ver Detalle</NavLink>          
         </CardActions>
       </Card>
     </Container>
