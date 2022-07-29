@@ -8,7 +8,6 @@
   --rosa: #c66d99;
 }
 
-
 /* NAVEGACION */
 .navegador {
   display: flex;
@@ -62,5 +61,37 @@ span {
   background-color: var(--naranja);
   color: white;
   margin: 1rem;
-  padding: 1rem .2rem 1rem .2rem;
+  padding: 1rem 0.2rem 1rem 0.2rem;
+}
+
+/* descripciones */
+
+.caracteristicas {
+  margin: 0 10rem;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 50% 50%;
+}
+.datasCaracteriscas img {
+  width: 10%;
+}
+.datasCaracteriscas {
+  display: flex;
+  align-items: center;
+} 
+.datasCaracteriscas p {
+  margin: 1rem .4rem;
+  align-self: center;
+}
+.padreDetalles {
+  display: flex;
+  flex-direction: column;
+}
+.textos {
+  align-self: flex-start;
+  margin: auto 2.9rem;
+  font-size: smaller;
+}
+.titulos {
+  margin: 0 10rem;
 }

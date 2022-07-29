@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(productos);
-      }, 1000);
+      }, 100);
     });
     if(itemID) {
       getData.then(res =>setData(res.find(detalle => detalle.id == itemID)))

@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 
 export const Item = ({ info }) => {
 
+
   return (
     <Container maxWidth="xs">
       <Card sx={{ maxWidth: 340 }}>
