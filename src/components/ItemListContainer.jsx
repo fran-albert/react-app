@@ -1,31 +1,43 @@
-import React, {useState, useEffect} from "react";
-import Swal from 'sweetalert2'
+import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 import ItemList from "./ItemList";
 import ItemCount from "./ItemCount";
-import {productos} from '../utils/productos'
-import {useParams} from 'react-router-dom'
-
+import { productos } from "../utils/productos";
+import { useParams } from "react-router-dom";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 
 const ItemListContainer = ({ greeting }) => {
-
-  const [data, setData] = useState([])
-  const {productosID} = useParams();
+  const [data, setData] = useState([]);
+  const { productosID } = useParams();
 
   useEffect(() => {
-    const getData = new Promise(resolve => {
-      setTimeout(() => {
-        resolve(productos)
-      }, 1000);
-    });
-    if(productosID) {
-      getData.then(res => setData(res.filter(asus => asus.category === productosID )))
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, "products");
+    if (productosID) {
+      const queryFilter = query(
+        queryCollection,
+        where("category", "==", "productosID")
+      );
+      getDocs(queryFilter).then((res) =>
+        setData(
+          res.docs.map((product) => ({ id: product.id, ...product.data() }))
+        )
+      );
     } else {
-      getData.then(res => setData(res))
+      getDocs(queryCollection).then((res) =>
+        setData(
+          res.docs.map((product) => ({ id: product.id, ...product.data() }))
+        )
+      );
     }
-  }, [productosID])
-  
+  }, [productosID]);
 
-  
   return (
     <div>
       <div className="texto">{greeting}</div>

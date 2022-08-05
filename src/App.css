@@ -95,3 +95,18 @@ span {
 .titulos {
   margin: 0 10rem;
 }
+
+/* ItemCart */
+.itemCart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem;
+}
+.totalDates {
+  text-align: center;
+}
+/* .imgCart img {
+  width: 30%;
+} */
+
